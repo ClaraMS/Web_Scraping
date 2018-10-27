@@ -1,0 +1,74 @@
+---
+title: "Dataset: Ranking juegos de mesa BoardGameGeek"
+author: "Clara Martínez"
+date: '`r format(Sys.Date(),"%e de %B, %Y")`'
+output:
+  pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Descripción
+
+El dataset generado contiene la información obtenida de los 200 primeros juegos de mesa en el ranking de BoardGameGeek en base a la puntuación obtenida por los usuarios de la web.
+
+## Imagen identificativa
+
+```{r,echo=FALSE, fig.align="center"}
+directory <- getwd()
+knitr::include_graphics(file.path(directory,"BoardGameExample.jpg"), dpi = 100)
+```
+
+## Contexto
+
+El conjunto de datos han sido obtenidos de la API https://www.boardgamegeek.com/xmlapi2/ de la web https://www.boardgamegeek.com/ Esta web contiene información de más de 80000 juegos de mesa y compone una vasta comunidad de usuarios activos que, puntúan dichos juegos de mesa y participan en los foros contestando dudas sobre la mecánica de algunos juegos, entre otras.
+En el caso concreto de esta práctica se han recopilado solo parte de la información de la web. En concreto, como se mencionaba en el apartado anterior, el ranking de los 200 primeros juegos de mesa mejor valorados por esta comunidad.
+
+## Contenido
+
+Para cada juego de mesa se han recopilado las siguientes variables:
+
+* id: Se corresponde con el identificador único del juego, proporcionado por BoardGameGeek.
+* name: Contiene el nombre del juego de mesa.
+* yearpublished: se corresponde con el año de publicación del juego.
+* minplayers: número mínimo de jugadores.
+* maxplayers: número máximo de jugadores.
+* playingtime: duración de la partida estándar.
+* minplaytime: tiempo mínimo de juego.
+* maxplaytime: tiempo máximo de juego.
+* minage: edad mínima para jugarlo.
+* users_rated: cuántos usuarios han votado por este juego. 
+* average_rating: media obtenida de los votos.
+* total_owners: cuánta gente lo tiene (de boardgamegeek)
+* total_traders: cuántos lo venden.
+* total_wanters: cuánta gente quiere tenerlo (de boardgamegeek)
+* total_wishers: cuánta gente lo tiene en su lista de deseados.  
+* total_comments: número de comentarios totales.
+* total_weights: peso total del juego.
+
+ 
+## Agradecimientos
+
+Los datos de esta página web se han ido generando en base a las opiniones de los usuarios, además de incluir los juegos propiamente. Por lo que se lo agradezco a todas las personas que participan diaramente por voluntad y a las que trabajan en esta web.
+
+## Inspiración
+
+A parte del interés personal que uno pueda tener por los juegos de mesa, me ha parecido interesante comenzar a recopilar información de este tipo ya que en un futuro se podría tratar de desarrollar alguna plataforma de asesoramiento de juegos de mesa.
+
+## Licencia
+
+La licencia elegida es Released Under CC BY-NC 4.0 License. He elegido esta licencia por el hecho de que BoardGameGeek es una página comercial con ciertas restricciones de su uso, por lo que no permiten que el contenido obtenido de ella sea utilizado para fines comerciales.
+
+## Código fuente y dataset
+
+Tanto el código fuente escrito para la extracción de datos como el dataset generado pueden ser accedidos a través de [este enlace](https://github.com/ClaraMS/Web_Scraping).
+
+## Recursos
+
+1. Lawson, R. (2015). Web Scraping with Python. Packt Publishing Ltd. Chapter 2. Scraping the Data  
+2. Mitchel, R. (2015). Web Scraping with Python: Collecting Data from the Modern Web. O'Reilly Media, Inc. Chapter 1. Your First Web Scraper.
+3. http://sdsawtelle.github.io/blog/output/boardgamegeek-data-scraping.html
+4. https://www.boardgamegeek.com/xmlapi2
+
