@@ -16,3 +16,5 @@ Esta práctica ha sido realizada de forma individual por Clara Martínez Sánche
 
 1. Lawson, R. (2015). Web Scraping with Python. Packt Publishing Ltd. Chapter 2. Scraping the Data.
 2. Mitchel, R. (2015). Web Scraping with Python: Collecting Data from the Modern Web. O'Reilly Media, Inc. Chapter 1. Your First Web Scraper.
+3. http://sdsawtelle.github.io/blog/output/boardgamegeek-data-scraping.html
+4. https://www.boardgamegeek.com/xmlapi2
